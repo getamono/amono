@@ -1,0 +1,3 @@
+tasks:
+  sync:
+    command: tsx .amono/sync/index.ts

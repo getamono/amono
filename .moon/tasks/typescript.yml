@@ -3,16 +3,24 @@ tasks:
     command: tsup src/index.ts
     args:
       - --format=esm,cjs
+      - --no-splitting
       - --sourcemap
       - --dts
+    deps:
+      - '^:build'
 
   dev:
     command: tsup src
     args:
       - --format=esm,cjs
+      - --no-splitting
       - --sourcemap
       - --dts
       - --watch
+    inputs:
+      - src/**/*.ts
+    outputs:
+      - dist
 
   ts:
     command: tsc

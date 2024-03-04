@@ -1,6 +1,9 @@
 language: typescript
 type: library
 
+dependsOn:
+  - find-root
+
 tasks:
   testSync:
     command: tsx tests/index.ts

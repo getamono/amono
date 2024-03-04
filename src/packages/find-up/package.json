@@ -1,4 +1,10 @@
 {
 	"name": "@amono/find-up",
-	"main": "dist/index.js"
+	"main": "dist/index.js",
+	"exports": {
+		".": {
+			"require": "./dist/index.js",
+			"import": "./dist/index.mjs"
+		}
+	}
 }

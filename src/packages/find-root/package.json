@@ -4,5 +4,11 @@
 	"types": "dist/index.d.ts",
 	"dependencies": {
 		"@amono/find-up": "workspace:*"
+	},
+	"exports": {
+		".": {
+			"require": "./dist/index.js",
+			"import": "./dist/index.mjs"
+		}
 	}
 }

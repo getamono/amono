@@ -1,3 +1,7 @@
 {
-	"name": "@amono/tsconfig"
+	"name": "@amono/tsconfig",
+	"main": "dist/index.js",
+	"amore": {
+		"noExports": true
+	}
 }

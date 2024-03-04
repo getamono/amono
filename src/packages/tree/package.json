@@ -1,3 +1,10 @@
 {
-	"name": "@amono/tree"
+	"name": "@amono/tree",
+	"main": "dist/index.js",
+	"exports": {
+		".": {
+			"require": "./dist/index.js",
+			"import": "./dist/index.mjs"
+		}
+	}
 }
