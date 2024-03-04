@@ -1,0 +1,12 @@
+{
+	"name": "@amoreh/root",
+	"version": "0.0.1",
+	"devDependencies": {
+		"prettier": "^3.2.5",
+		"tsup": "^8.0.2"
+	},
+	"workspaces": [
+		"src/**"
+	],
+	"packageManager": "yarn@4.1.0"
+}
