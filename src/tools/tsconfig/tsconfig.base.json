@@ -1,0 +1,33 @@
+{
+	"compilerOptions": {
+		"target": "es2020",
+		"lib": ["esnext", "dom"],
+
+		"useDefineForClassFields": true,
+
+		"module": "commonjs",
+		"moduleResolution": "node",
+
+		"strict": true,
+		"jsx": "preserve",
+
+		"allowJs": true,
+		"resolveJsonModule": true,
+
+		"noEmit": true,
+		"incremental": false,
+
+		"skipLibCheck": true,
+		"skipDefaultLibCheck": true,
+
+		"esModuleInterop": true,
+		"isolatedModules": true,
+		"allowSyntheticDefaultImports": true,
+		"forceConsistentCasingInFileNames": true,
+
+		"allowUnreachableCode": true,
+
+		"experimentalDecorators": true,
+		"noUncheckedIndexedAccess": true
+	}
+}

@@ -1,0 +1,19 @@
+$schema: 'https://moonrepo.dev/schemas/toolchain.json'
+
+node:
+  version: '20'
+
+  packageManager: 'yarn'
+
+  yarn:
+    version: '4.1.0'
+
+  addEnginesConstraint: true
+
+  dedupeOnLockfileChange: true
+
+  inferTasksFromScripts: false
+
+  rootPackageOnly: true
+
+  syncProjectWorkspaceDependencies: true
