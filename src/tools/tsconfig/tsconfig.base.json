@@ -15,7 +15,7 @@
 		"resolveJsonModule": true,
 
 		"noEmit": true,
-		"incremental": false,
+		"declaration": true,
 
 		"skipLibCheck": true,
 		"skipDefaultLibCheck": true,

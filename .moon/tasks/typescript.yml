@@ -1,0 +1,18 @@
+tasks:
+  build:
+    command: tsup src/index.ts
+    args:
+      - --format=esm,cjs
+      - --sourcemap
+      - --dts
+
+  dev:
+    command: tsup src
+    args:
+      - --format=esm,cjs
+      - --sourcemap
+      - --dts
+      - --watch
+
+  ts:
+    command: tsc

@@ -1,3 +1,8 @@
 {
-	"name": "@amoreh/find-root"
+	"name": "@amoreh/find-root",
+	"main": "./dist/index.js",
+	"types": "dist/index.d.ts",
+	"dependencies": {
+		"@amoreh/find-up": "workspace:*"
+	}
 }

@@ -5,9 +5,23 @@ __metadata:
   version: 8
   cacheKey: 10c0
 
+"@amono/tree@workspace:src/packages/tree":
+  version: 0.0.0-use.local
+  resolution: "@amono/tree@workspace:src/packages/tree"
+  languageName: unknown
+  linkType: soft
+
 "@amoreh/find-root@workspace:src/packages/find-root":
   version: 0.0.0-use.local
   resolution: "@amoreh/find-root@workspace:src/packages/find-root"
+  dependencies:
+    "@amoreh/find-up": "workspace:*"
+  languageName: unknown
+  linkType: soft
+
+"@amoreh/find-up@workspace:*, @amoreh/find-up@workspace:src/packages/find-up":
+  version: 0.0.0-use.local
+  resolution: "@amoreh/find-up@workspace:src/packages/find-up"
   languageName: unknown
   linkType: soft
 
@@ -26,6 +40,10 @@ __metadata:
 "@amoreh/sync@workspace:src/packages/sync":
   version: 0.0.0-use.local
   resolution: "@amoreh/sync@workspace:src/packages/sync"
+  dependencies:
+    zod: "npm:^3.22.4"
+  peerDependencies:
+    zod: "*"
   languageName: unknown
   linkType: soft
 
@@ -2068,5 +2086,12 @@ __metadata:
   bin:
     yaml: bin.mjs
   checksum: 10c0/97ab0b5a0714c92e4dd75120a6a63e470b0adc282afae0a701bf38f8c42cbf6429fcd6aca883e3a63c68936ab841862e6c69e2d66d355c3e4fc7cfd346af2108
+  languageName: node
+  linkType: hard
+
+"zod@npm:^3.22.4":
+  version: 3.22.4
+  resolution: "zod@npm:3.22.4"
+  checksum: 10c0/7578ab283dac0eee66a0ad0fc4a7f28c43e6745aadb3a529f59a4b851aa10872b3890398b3160f257f4b6817b4ce643debdda4fb21a2c040adda7862cab0a587
   languageName: node
   linkType: hard

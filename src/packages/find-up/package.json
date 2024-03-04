@@ -1,0 +1,4 @@
+{
+	"name": "@amoreh/find-up",
+	"main": "./dist/index.js"
+}
