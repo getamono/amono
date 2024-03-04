@@ -1,4 +1,4 @@
 {
-	"name": "@amoreh/find-up",
-	"main": "./dist/index.js"
+	"name": "@amono/find-up",
+	"main": "dist/index.js"
 }

@@ -1,8 +1,8 @@
 {
-	"name": "@amoreh/find-root",
-	"main": "./dist/index.js",
+	"name": "@amono/find-root",
+	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
 	"dependencies": {
-		"@amoreh/find-up": "workspace:*"
+		"@amono/find-up": "workspace:*"
 	}
 }

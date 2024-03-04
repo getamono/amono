@@ -1,3 +1,10 @@
 {
-    "name": "@amoreh/sync"
+	"name": "@amono/sync",
+	"main": "dist/index.js",
+	"devDependencies": {
+		"zod": "^3.22.4"
+	},
+	"dependencies": {
+		"fast-glob": "^3.3.2"
+	}
 }

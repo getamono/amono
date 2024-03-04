@@ -1,0 +1,6 @@
+language: typescript
+type: library
+
+tasks:
+  testSync:
+    command: tsx tests/index.ts

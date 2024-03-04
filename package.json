@@ -1,11 +1,12 @@
 {
-	"name": "@amoreh/root",
+	"name": "@amono/root",
 	"version": "0.0.1",
 	"devDependencies": {
 		"@moonrepo/cli": "^1.22.3",
 		"@types/node": "^20.11.24",
 		"prettier": "^3.2.5",
 		"tsup": "^8.0.2",
+		"tsx": "^4.7.1",
 		"typescript": "^5.3.3"
 	},
 	"workspaces": [

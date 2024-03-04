@@ -1,4 +1,5 @@
-import { findUp } from '@amoreh/find-up';
+import { findUp } from '@amono/find-up';
+import path from 'path';
 
 export async function findRoot() {
 	const root = await findUp({
@@ -6,7 +7,7 @@ export async function findRoot() {
 	});
 
 	if (root) {
-		return root;
+		return path.dirname(root);
 	}
 
 	throw new Error('Workspace root not found');

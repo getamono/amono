@@ -5,51 +5,51 @@ __metadata:
   version: 8
   cacheKey: 10c0
 
+"@amono/find-root@workspace:src/packages/find-root":
+  version: 0.0.0-use.local
+  resolution: "@amono/find-root@workspace:src/packages/find-root"
+  dependencies:
+    "@amono/find-up": "workspace:*"
+  languageName: unknown
+  linkType: soft
+
+"@amono/find-up@workspace:*, @amono/find-up@workspace:src/packages/find-up":
+  version: 0.0.0-use.local
+  resolution: "@amono/find-up@workspace:src/packages/find-up"
+  languageName: unknown
+  linkType: soft
+
+"@amono/root@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "@amono/root@workspace:."
+  dependencies:
+    "@moonrepo/cli": "npm:^1.22.3"
+    "@types/node": "npm:^20.11.24"
+    prettier: "npm:^3.2.5"
+    tsup: "npm:^8.0.2"
+    tsx: "npm:^4.7.1"
+    typescript: "npm:^5.3.3"
+  languageName: unknown
+  linkType: soft
+
+"@amono/sync@workspace:src/packages/sync":
+  version: 0.0.0-use.local
+  resolution: "@amono/sync@workspace:src/packages/sync"
+  dependencies:
+    fast-glob: "npm:^3.3.2"
+    zod: "npm:^3.22.4"
+  languageName: unknown
+  linkType: soft
+
 "@amono/tree@workspace:src/packages/tree":
   version: 0.0.0-use.local
   resolution: "@amono/tree@workspace:src/packages/tree"
   languageName: unknown
   linkType: soft
 
-"@amoreh/find-root@workspace:src/packages/find-root":
+"@amono/tsconfig@workspace:src/tools/tsconfig":
   version: 0.0.0-use.local
-  resolution: "@amoreh/find-root@workspace:src/packages/find-root"
-  dependencies:
-    "@amoreh/find-up": "workspace:*"
-  languageName: unknown
-  linkType: soft
-
-"@amoreh/find-up@workspace:*, @amoreh/find-up@workspace:src/packages/find-up":
-  version: 0.0.0-use.local
-  resolution: "@amoreh/find-up@workspace:src/packages/find-up"
-  languageName: unknown
-  linkType: soft
-
-"@amoreh/root@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "@amoreh/root@workspace:."
-  dependencies:
-    "@moonrepo/cli": "npm:^1.22.3"
-    "@types/node": "npm:^20.11.24"
-    prettier: "npm:^3.2.5"
-    tsup: "npm:^8.0.2"
-    typescript: "npm:^5.3.3"
-  languageName: unknown
-  linkType: soft
-
-"@amoreh/sync@workspace:src/packages/sync":
-  version: 0.0.0-use.local
-  resolution: "@amoreh/sync@workspace:src/packages/sync"
-  dependencies:
-    zod: "npm:^3.22.4"
-  peerDependencies:
-    zod: "*"
-  languageName: unknown
-  linkType: soft
-
-"@amoreh/tsconfig@workspace:src/tools/tsconfig":
-  version: 0.0.0-use.local
-  resolution: "@amoreh/tsconfig@workspace:src/tools/tsconfig"
+  resolution: "@amono/tsconfig@workspace:src/tools/tsconfig"
   languageName: unknown
   linkType: soft
 
@@ -804,7 +804,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"esbuild@npm:^0.19.2":
+"esbuild@npm:^0.19.2, esbuild@npm:~0.19.10":
   version: 0.19.12
   resolution: "esbuild@npm:0.19.12"
   dependencies:
@@ -908,7 +908,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fast-glob@npm:^3.2.9":
+"fast-glob@npm:^3.2.9, fast-glob@npm:^3.3.2":
   version: 3.3.2
   resolution: "fast-glob@npm:3.3.2"
   dependencies:
@@ -967,7 +967,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fsevents@npm:~2.3.2":
+"fsevents@npm:~2.3.2, fsevents@npm:~2.3.3":
   version: 2.3.3
   resolution: "fsevents@npm:2.3.3"
   dependencies:
@@ -977,7 +977,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fsevents@patch:fsevents@npm%3A~2.3.2#optional!builtin<compat/fsevents>":
+"fsevents@patch:fsevents@npm%3A~2.3.2#optional!builtin<compat/fsevents>, fsevents@patch:fsevents@npm%3A~2.3.3#optional!builtin<compat/fsevents>":
   version: 2.3.3
   resolution: "fsevents@patch:fsevents@npm%3A2.3.3#optional!builtin<compat/fsevents>::version=2.3.3&hash=df0bf1"
   dependencies:
@@ -990,6 +990,15 @@ __metadata:
   version: 6.0.1
   resolution: "get-stream@npm:6.0.1"
   checksum: 10c0/49825d57d3fd6964228e6200a58169464b8e8970489b3acdc24906c782fb7f01f9f56f8e6653c4a50713771d6658f7cfe051e5eb8c12e334138c9c918b296341
+  languageName: node
+  linkType: hard
+
+"get-tsconfig@npm:^4.7.2":
+  version: 4.7.2
+  resolution: "get-tsconfig@npm:4.7.2"
+  dependencies:
+    resolve-pkg-maps: "npm:^1.0.0"
+  checksum: 10c0/169b2beababfbb16e8a0ae813ee59d3e14d4960231c816615161ab5be68ec07a394dce59695742ac84295e2efab8d9e89bcf3abaf5e253dfbec3496e01bb9a65
   languageName: node
   linkType: hard
 
@@ -1611,6 +1620,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"resolve-pkg-maps@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "resolve-pkg-maps@npm:1.0.0"
+  checksum: 10c0/fb8f7bbe2ca281a73b7ef423a1cbc786fb244bd7a95cbe5c3fba25b27d327150beca8ba02f622baea65919a57e061eb5005204daa5f93ed590d9b77463a567ab
+  languageName: node
+  linkType: hard
+
 "retry@npm:^0.12.0":
   version: 0.12.0
   resolution: "retry@npm:0.12.0"
@@ -1963,6 +1979,22 @@ __metadata:
     tsup: dist/cli-default.js
     tsup-node: dist/cli-node.js
   checksum: 10c0/de3e8b2d9a7a504afb9394f2409ef88fd21dd338a78ebb572dd5c1719d73db816baa7ae4b7867016f08ba6a67560daec13a85768efff1d70e380972e39e27ce6
+  languageName: node
+  linkType: hard
+
+"tsx@npm:^4.7.1":
+  version: 4.7.1
+  resolution: "tsx@npm:4.7.1"
+  dependencies:
+    esbuild: "npm:~0.19.10"
+    fsevents: "npm:~2.3.3"
+    get-tsconfig: "npm:^4.7.2"
+  dependenciesMeta:
+    fsevents:
+      optional: true
+  bin:
+    tsx: dist/cli.mjs
+  checksum: 10c0/5711bec9467fe2984b8cca2f3d99955a49aad62b8e2e8c2054488827dd2ea4618e0dfc0cc1c1642e311734e085631a268a2b53e83afb666c86f572039adebb9f
   languageName: node
   linkType: hard
 
