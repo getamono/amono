@@ -1,6 +1,6 @@
-# @amoreh
+# @amono
 
-Amoreh stands for `A MOnoREpo Helper`.
+Helping monorepos to be more manageable.
 
 # Background
 
