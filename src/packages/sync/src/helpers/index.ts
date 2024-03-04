@@ -1,2 +1,2 @@
 export * from './readJsonFile';
-export * from './updatePackageJson';
+export * from './updateJsonFile';

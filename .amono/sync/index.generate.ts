@@ -1,4 +1,4 @@
-import { SyncConfig, updatePackageJson } from '@amono/sync';
+import { SyncConfig, updateJsonFile } from '@amono/sync';
 import { Project } from './index.schema';
 
 export const generate: SyncConfig<Project>['generate'] = {
@@ -18,11 +18,13 @@ export const generate: SyncConfig<Project>['generate'] = {
 			});
 		}
 
-		updatePackageJson({
-			target: project.absolutePath,
+		updateJsonFile({
+			targetPath: project.absolutePath,
+			fileName: 'package.json',
 			data,
 		});
 	},
+
 	onRootProject(rootProject, projects) {
 		// console.log({ rootProject });
 	},

@@ -1,23 +1,24 @@
 import path from 'path';
 import fs from 'fs';
 import { promisify } from 'util';
+
 import { runPrettier } from '../runPrettier';
 import { readJsonFile } from '../readJsonFile';
 
 const writeFile = promisify(fs.writeFile);
 
-function createFilePath(target: string) {
-	if (target.endsWith('package.json')) {
-		return target;
+function createFilePath(config: UpdateJsonFileConfig) {
+	const { targetPath, fileName } = config;
+
+	if (targetPath.endsWith(fileName)) {
+		return targetPath;
 	}
 
-	return path.join(target, 'package.json');
+	return path.join(targetPath, fileName);
 }
 
-export async function updatePackageJson(config: UpdatePackageJsonConfig) {
-	const { target } = config;
-
-	const filePath = createFilePath(target);
+export async function updateJsonFile(config: UpdateJsonFileConfig) {
+	const filePath = createFilePath(config);
 
 	const currentContent = await readJsonFile(filePath);
 
@@ -28,7 +29,9 @@ export async function updatePackageJson(config: UpdatePackageJsonConfig) {
 	await runPrettier(filePath);
 }
 
-export interface UpdatePackageJsonConfig {
-	target: string; // directory or file
+export interface UpdateJsonFileConfig {
+	targetPath: string;
+	fileName: string;
+
 	data: Record<string, any>;
 }
