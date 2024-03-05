@@ -1,12 +1,15 @@
 import { CreateFilePathConfig, createFilePath } from '../createFilePath';
 import { $fs } from '../fs';
+import { runPrettier } from '../runPrettier';
 
-export function writeJsonFile(config: WriteJsonFileConfig) {
+export async function writeJsonFile(config: WriteJsonFileConfig) {
 	const filePath = createFilePath(config);
 
 	const content = JSON.stringify(config.data, null, 2);
 
-	return $fs.writeFile(filePath, content);
+	await $fs.writeFile(filePath, content);
+
+	runPrettier(filePath);
 }
 
 export type WriteJsonFileConfig = CreateFilePathConfig.Extend<{
