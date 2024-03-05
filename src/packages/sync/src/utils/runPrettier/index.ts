@@ -1,16 +1,12 @@
 import { exec } from 'child_process';
 
 import { findRoot } from '@amono/find-root';
-import fs from 'fs';
+import fs from 'fs-extra';
 
 async function isPrettierInstalled() {
 	const rootPath = await findRoot();
 
-	return new Promise<boolean>((resolve) => {
-		fs.stat(`${rootPath}/node_modules/prettier`, (error) => {
-			resolve(!error);
-		});
-	});
+	return fs.exists(`${rootPath}/node_modules/prettier`);
 }
 
 export async function runPrettier(target: string) {

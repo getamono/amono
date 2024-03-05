@@ -1,3 +1,4 @@
 {
-	"extends": "@amono/tsconfig/tsconfig.base.json"
+	"extends": "@amono/tsconfig/tsconfig.base.json",
+	"include": ["src"]
 }

@@ -1,4 +1,4 @@
-import { sync, readJsonFile } from '@amono/sync';
+import { readJsonFile, sync } from '@amono/sync';
 import { generate } from './index.generate';
 import { projectSchema } from './index.schema';
 
@@ -9,7 +9,10 @@ sync({
 		async createProject(input) {
 			const { absolutePath } = input;
 
-			const pkgJson = await readJsonFile(absolutePath + '/package.json');
+			const pkgJson = await readJsonFile({
+				dirPath: absolutePath,
+				fileName: 'package.json',
+			});
 
 			return projectSchema.parse({
 				...input,

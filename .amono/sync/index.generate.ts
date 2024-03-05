@@ -19,9 +19,18 @@ export const generate: SyncConfig<Project>['generate'] = {
 		}
 
 		updateJsonFile({
-			targetPath: project.absolutePath,
+			dirPath: project.absolutePath,
 			fileName: 'package.json',
 			data,
+		});
+
+		updateJsonFile({
+			dirPath: project.absolutePath,
+			fileName: 'tsconfig.json',
+			data: {
+				extends: '@amono/tsconfig/tsconfig.base.json',
+				include: ['src'],
+			},
 		});
 	},
 

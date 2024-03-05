@@ -2,11 +2,13 @@
 	"name": "@amono/sync",
 	"main": "dist/index.js",
 	"devDependencies": {
+		"@types/fs-extra": "^11.0.4",
 		"zod": "^3.22.4"
 	},
 	"dependencies": {
 		"@amono/find-root": "workspace:*",
-		"fast-glob": "^3.3.2"
+		"fast-glob": "^3.3.2",
+		"fs-extra": "^11.2.0"
 	},
 	"exports": {
 		".": {

@@ -2,29 +2,23 @@ import { SyncConfig } from '../types';
 import { findRoot } from '@amono/find-root';
 
 import fg from 'fast-glob';
-import fs from 'fs';
+import fs from 'fs-extra';
 import path from 'path';
 
 type $Project = SyncConfig.Project;
 
 function createProjectPath(targetPath: string) {
-	return new Promise<string>((resolve, reject) => {
-		fs.stat(targetPath, (error, stats) => {
-			if (error) {
-				reject(error);
-			}
+	const stats = fs.statSync(targetPath);
 
-			if (stats.isDirectory()) {
-				resolve(targetPath);
-			}
+	if (stats.isDirectory()) {
+		return targetPath;
+	}
 
-			if (stats.isFile()) {
-				resolve(path.dirname(targetPath));
-			}
+	if (stats.isFile()) {
+		return path.dirname(targetPath);
+	}
 
-			reject(new Error(`Unknown file type: ${targetPath}`));
-		});
-	});
+	throw new Error(`Unknown file type: ${targetPath}`);
 }
 
 export async function sync<Project extends $Project>(config: SyncConfig<Project>) {
