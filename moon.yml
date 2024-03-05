@@ -3,7 +3,5 @@ tasks:
     command: tsx .amono/sync/index.ts
 
   publish:
-    command: |
-      lerna version
-      lerna publish from-git
+    command: lerna publish from-package --no-private
     local: true

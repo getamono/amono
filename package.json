@@ -1,4 +1,5 @@
 {
+	"private": true,
 	"name": "@amono/root",
 	"version": "0.0.1",
 	"devDependencies": {
