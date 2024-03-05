@@ -4,8 +4,12 @@ tasks:
 
   publish:
     command: lerna publish from-package
+    deps:
+      - :build
     local: true
 
   publish_patch:
     command: lerna publish patch
+    deps:
+      - :build
     local: true
