@@ -4,6 +4,7 @@
 	"devDependencies": {
 		"@moonrepo/cli": "^1.22.3",
 		"@types/node": "^20.11.24",
+		"lerna": "^8.1.2",
 		"prettier": "^3.2.5",
 		"tsup": "^8.0.2",
 		"tsx": "^4.7.1",

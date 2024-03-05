@@ -1,3 +1,9 @@
 tasks:
   sync:
     command: tsx .amono/sync/index.ts
+
+  publish:
+    command: |
+      lerna version
+      lerna publish from-git
+    local: true
