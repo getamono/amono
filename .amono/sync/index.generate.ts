@@ -1,11 +1,15 @@
 import { SyncConfig, updateJsonFile } from '@amono/sync';
 import { Project } from './index.schema';
 
+import { version } from '../../lerna.json';
+
 export const generate: SyncConfig<Project>['generate'] = {
 	onProject(project) {
 		const { pkgJson } = project;
 
 		const data = {
+			version,
+			license: 'MIT',
 			main: 'dist/index.js',
 			files: pkgJson.private ? undefined : ['dist'],
 		};
