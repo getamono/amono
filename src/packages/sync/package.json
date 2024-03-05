@@ -16,9 +16,12 @@
 			"import": "./dist/index.mjs"
 		}
 	},
+	"license": "MIT",
+	"version": "0.0.1",
 	"files": [
 		"dist"
 	],
-	"license": "MIT",
-	"version": "0.0.1"
+	"publishConfig": {
+		"access": "public"
+	}
 }

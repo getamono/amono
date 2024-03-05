@@ -20,8 +20,17 @@ export const generate: SyncConfig<Project>['generate'] = {
 
 		const data = {
 			main: 'dist/index.js',
-			files: pkgJson.private ? undefined : ['dist'],
+			files: undefined,
 		};
+
+		if (!pkgJson.private) {
+			Object.assign(data, {
+				files: ['dist'],
+				publishConfig: {
+					access: 'public',
+				},
+			});
+		}
 
 		if (!pkgJson.amore?.noExports) {
 			Object.assign(data, {
