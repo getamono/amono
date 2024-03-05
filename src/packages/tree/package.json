@@ -1,4 +1,5 @@
 {
+	"private": true,
 	"name": "@amono/tree",
 	"main": "dist/index.js",
 	"exports": {

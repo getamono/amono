@@ -3,11 +3,14 @@ import { Project } from './index.schema';
 
 export const generate: SyncConfig<Project>['generate'] = {
 	onProject(project, projects) {
+		const { pkgJson } = project;
+
 		const data = {
 			main: 'dist/index.js',
+			files: pkgJson.private ? undefined : ['dist'],
 		};
 
-		if (!project.pkgJson.amore?.noExports) {
+		if (!pkgJson.amore?.noExports) {
 			Object.assign(data, {
 				exports: {
 					'.': {

@@ -5,6 +5,8 @@ export const projectSchema = z.object({
 	relativePath: z.string(),
 
 	pkgJson: z.object({
+		private: z.boolean().default(false),
+
 		name: z.string(),
 
 		amore: z

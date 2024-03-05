@@ -1,4 +1,5 @@
 {
+	"private": true,
 	"name": "@amono/tsconfig",
 	"main": "dist/index.js",
 	"amore": {
