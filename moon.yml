@@ -5,11 +5,16 @@ tasks:
   publish:
     command: lerna publish from-package
     deps:
-      - :build
+      - ^:build
     local: true
 
   publish_patch:
-    command: lerna publish patch
+    command: lerna publish patch --force-publish --yes
     deps:
-      - :build
+      - ^:build
     local: true
+
+dependsOn:
+  - find-root
+  - find-up
+  - sync
