@@ -8,5 +8,6 @@
 			"import": "./dist/index.mjs"
 		}
 	},
-	"license": "MIT"
+	"license": "MIT",
+	"version": "0.0.1"
 }
