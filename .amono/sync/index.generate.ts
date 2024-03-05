@@ -3,13 +3,22 @@ import { Project } from './index.schema';
 
 import { version } from '../../lerna.json';
 
+function updateBasicPackage(project: Project) {
+	return updateJsonFile({
+		dirPath: project.absolutePath,
+		fileName: 'package.json',
+		data: {
+			version,
+			license: 'MIT',
+		},
+	});
+}
+
 export const generate: SyncConfig<Project>['generate'] = {
-	onProject(project) {
+	async onProject(project) {
 		const { pkgJson } = project;
 
 		const data = {
-			version,
-			license: 'MIT',
 			main: 'dist/index.js',
 			files: pkgJson.private ? undefined : ['dist'],
 		};
@@ -25,13 +34,15 @@ export const generate: SyncConfig<Project>['generate'] = {
 			});
 		}
 
-		updateJsonFile({
+		await updateBasicPackage(project);
+
+		await updateJsonFile({
 			dirPath: project.absolutePath,
 			fileName: 'package.json',
 			data,
 		});
 
-		updateJsonFile({
+		await updateJsonFile({
 			dirPath: project.absolutePath,
 			fileName: 'tsconfig.json',
 			data: {
@@ -41,5 +52,7 @@ export const generate: SyncConfig<Project>['generate'] = {
 		});
 	},
 
-	onRootProject() {},
+	async onRootProject(project) {
+		await updateBasicPackage(project);
+	},
 };
