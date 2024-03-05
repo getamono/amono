@@ -2,7 +2,7 @@ import { SyncConfig, updateJsonFile } from '@amono/sync';
 import { Project } from './index.schema';
 
 export const generate: SyncConfig<Project>['generate'] = {
-	onProject(project, projects) {
+	onProject(project) {
 		const { pkgJson } = project;
 
 		const data = {
@@ -37,7 +37,5 @@ export const generate: SyncConfig<Project>['generate'] = {
 		});
 	},
 
-	onRootProject(rootProject, projects) {
-		// console.log({ rootProject });
-	},
+	onRootProject() {},
 };
