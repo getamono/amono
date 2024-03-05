@@ -9,5 +9,6 @@
 	},
 	"files": [
 		"dist"
-	]
+	],
+	"license": "MIT"
 }

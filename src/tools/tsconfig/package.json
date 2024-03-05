@@ -4,5 +4,6 @@
 	"main": "dist/index.js",
 	"amore": {
 		"noExports": true
-	}
+	},
+	"license": "MIT"
 }
